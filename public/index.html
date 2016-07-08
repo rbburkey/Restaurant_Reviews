@@ -21,6 +21,13 @@
         <th>Image</th>
         <th>Review</th>
       </thead>
+      <tbody>
+        <tr ng-repeat="restaurant in restaurantReviews">
+          <td>{{restaurant.name}}</td>
+          <td>{{restaurant.image}}</td>
+          <td>{{restaurant.review}}</td>
+        </tr>
+      </tbody>
     </table>
 
   </div>
