@@ -31,14 +31,14 @@
           <td><input class="form-control" ng-model="restaurant.image"></td>
           <td><input class="form-control" ng-model="restaurant.review"></td>
           <td><button class="btn-primary" ng-click="addRestaurant()">Add Restaurant Review</button></td>
-          <td><button class="btn btn-info" ng-click="update()">Update</button></td>
+          <td><button class="btn btn-info" ng-click="update()">Update</button>&nbsp;&nbsp<button class="btn btn-info" ng-click="deselect()">Clear</button></td>
           </tr>
         <tr ng-repeat="restaurant in restaurantReviews">
           <td>{{restaurant.name}}</td>
           <td>{{restaurant.image}}</td>
           <td>{{restaurant.review}}</td>
           <td><button class="btn btn-danger" ng-click="remove(restaurant._id)">Remove</button></td>
-          <td><button class="btn btn-warning" ng-click="edit()">Edit</button></td>
+          <td><button class="btn btn-warning" ng-click="edit(restaurant._id)">Edit</button></td>
 
         </tr>
       </tbody>

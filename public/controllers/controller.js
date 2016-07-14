@@ -37,4 +37,15 @@ refresh();
 
   };
 
+  $scope.update = function() {
+    console.log($scope.restaurant._id);                    //this is what you send to the server $scope.restaurant
+    $http.put('/restaurantReviews/' + $scope.restaurant._id, $scope.restaurant).success(function(response) {
+      refresh();
+    });
+  };
+
+  $scope.deselect = function () {
+    $scope.restauraunt = "";
+  };
+
 }]);
